@@ -71,7 +71,7 @@ public class PacienteController {
             
             model.addAttribute("paciente", new Paciente());
         
-            return "verPacientes";
+            return "nuevoPaciente";
         }
     }
     
