@@ -53,7 +53,7 @@ public class RecetaController {
             return "redirect:/login";
         }else{
             int idMedico = c.getIdMedico().getId();
-            List<Receta> recetas = rDao.findByIdMedicoAndIdPaciente(idMedico, idPaciente);
+            List<Receta> recetas = rDao.findByIdMedico_IdAndIdPaciente_Id(idMedico, idPaciente);
             model.addAttribute("recetas", recetas);
             return "verRecetas";
         }
@@ -72,7 +72,7 @@ public class RecetaController {
             return "redirect:/login";
         }else{
             int idMedico = c.getIdMedico().getId();
-            List<Receta> recetas = rDao.findByIdMedico(idMedico);
+            List<Receta> recetas = rDao.findByIdMedico_Id(idMedico);
             model.addAttribute("recetas", recetas);
             return "verRecetas";
         }

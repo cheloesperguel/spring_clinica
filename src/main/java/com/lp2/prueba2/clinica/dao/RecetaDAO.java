@@ -15,11 +15,11 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface RecetaDAO extends CrudRepository<Receta, Integer> {
    
-    public List<Receta> findByIdMedico(int id);
+    public List<Receta> findByIdMedico_Id(int id);
 
-    public List<Receta> findByIdPaciente(int id);
+    public List<Receta> findByIdPaciente_Id(int id);
 
-    public List<Receta> findByIdMedicoAndIdPaciente(int idMedico,int idPaciente);
+    public List<Receta> findByIdMedico_IdAndIdPaciente_Id(int idMedico,int idPaciente);
     
     public Receta findById(int id);
 }

@@ -16,7 +16,7 @@ import org.springframework.data.repository.CrudRepository;
 public interface PacienteDAO extends CrudRepository<Paciente, Integer> {
     
     
-    public List<Paciente> findByIdMedico(int id); 
+    //public List<Paciente> findByIdMedico_Id(int id); 
     
     public Paciente findById(int id);
 }

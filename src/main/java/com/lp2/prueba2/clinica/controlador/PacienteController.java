@@ -46,7 +46,9 @@ public class PacienteController {
             return "redirect:/login";
         }else {
             int idMedico=c.getIdMedico().getId();
-            List<Paciente> pacientes = pDao.findByIdMedico(idMedico);
+            Medico m = mDao.findById(idMedico);
+            
+            List<Paciente> pacientes = m.getPacienteList();
             model.addAttribute("pacientes", pacientes);
         
             return "verPacientes";
