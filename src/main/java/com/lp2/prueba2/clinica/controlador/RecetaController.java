@@ -13,6 +13,7 @@ import com.lp2.prueba2.clinica.modelo.ItemReceta;
 import com.lp2.prueba2.clinica.modelo.Medico;
 import com.lp2.prueba2.clinica.modelo.Paciente;
 import com.lp2.prueba2.clinica.modelo.Receta;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
@@ -112,8 +113,10 @@ public class RecetaController {
             Receta r = new Receta();
             r.setIdPaciente(p);
             r.setIdMedico(m);
+            
+            r.setItemRecetaList(new ArrayList<ItemReceta>());
 
-            for (int i = 1; i <= 5; i++) {
+            for (int i = 0; i <= 4; i++) {
                 r.getItemRecetaList().add(new ItemReceta());
             }
 
