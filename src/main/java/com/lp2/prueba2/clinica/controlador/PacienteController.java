@@ -93,6 +93,7 @@ public class PacienteController {
             
             medico.getPacienteList().add(p);
             
+            pDao.save(p);
             mDao.save(medico);
         
             return "redirect:/pacientes/ver";
