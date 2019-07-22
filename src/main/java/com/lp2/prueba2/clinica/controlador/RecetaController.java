@@ -120,7 +120,7 @@ public class RecetaController {
                 r.getItemRecetaList().add(new ItemReceta());
             }
 
-            model.addAttribute("receta", new Receta());
+            model.addAttribute("receta", r);
             return "nuevaReceta";
         }
         
